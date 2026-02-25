@@ -457,6 +457,78 @@ html {
 
 }
 
+/* pacs */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.page-header {
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.pac-intro {
+    background: #f8f9fc;
+    text-align: center;
+}
+
+.pac-support h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.support-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+}
+
+.pac-cta {
+    background: #1cc88a;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: white;
+    color: #1cc88a;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+}
 
 
 
