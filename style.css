@@ -354,18 +354,59 @@ a:hover {
   text-decoration: underline;
 } 
 
-/* Counseling Section - Nude */
-.counseling-section {
-  background-color: #f4e9e2;  /* soft nude */
-  padding: 80px 10%;
-  border-radius: 20px;
-  margin-bottom: 60px;
+/* General Section Spacing */
+.life-section {
+    padding: 80px 10%;
+    border-radius: 20px;
+    margin: 60px 10%;
 }
 
-/* Engagement Section - Beige */
-.engagement-section {
-  background-color: #efe3d5;  /* warm beige */
-  padding: 80px 10%;
-  border-radius: 20px;
+/* Counseling Nude Background */
+.counseling-block {
+    background-color: #f4e9e2; /* soft nude */
+}
+
+/* Engagement Beige Background */
+.engagement-block {
+    background-color: #efe3d5; /* warm beige */
+}
+
+/* Text */
+.life-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.life-text p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Explore Button */
+.explore-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1e3a5f;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #163049;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Secondary Button */
+.explore-btn.secondary {
+    background-color: #6b5b4d;
+}
+
+.explore-btn.secondary:hover {
+    background-color: #57463a;
 }
 
