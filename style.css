@@ -464,3 +464,18 @@ a:hover {
   margin-top: 20px;
 }
 
+.financial-section {
+  background-color: #dfeee6;   /* soft sage */
+  padding: 50px 30px;
+  margin: 60px auto;
+  max-width: 1000px;
+  border-radius: 16px;
+}
+
+.financial-section h2 {
+  margin-bottom: 20px;
+}
+
+.financial-section h3 {
+  margin-top: 25px;
+}
