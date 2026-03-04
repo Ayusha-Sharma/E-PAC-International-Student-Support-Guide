@@ -1,208 +1,355 @@
-/* ================= RESET ================= */
+/* ============================================
+   GLOBAL RESET
+============================================ */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f7fb;
-    color: #1e293b;
-    line-height: 1.6;
+  line-height: 1.6;
+  color: #333;
 }
 
-/* ================= NAVBAR ================= */
+/* ============================================
+   NAVBAR
+============================================ */
 .navbar {
-    background: linear-gradient(to right, #0b3d91, #102a66);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #0e1722;
+  color: white;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .globe-icon {
-    width: 40px;
+  width: 60px;
+  height: auto;
 }
 
-.navbar nav {
-    display: flex;
-    gap: 25px;
+.logo span {
+  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: 0.5px;
 }
 
 .navbar nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 15px;
+  opacity: 0.85;
+  transition: 0.2s;
 }
 
 .navbar nav a:hover {
-    color: #ffcc00;
+  opacity: 1;
 }
 
 .navbar nav a.active {
-    border-bottom: 2px solid #ffcc00;
+  border-bottom: 2px solid white;
+  padding-bottom: 6px;
 }
 
-/* ================= HERO SECTION (HOMEPAGE) ================= */
+/* ============================================
+   HERO SECTION
+============================================ */
 .hero {
-    text-align: center;
-    padding: 60px 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 70px;
+  background: radial-gradient(circle at top, #1a2a3a, #0c131d);
+  color: white;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 15px;
+.hero-text {
+  max-width: 55%;
 }
 
-.hero p {
-    max-width: 800px;
-    margin: auto;
-    color: #555;
+.hero-box {
+  border: 3px solid white;
+  padding: 25px 35px;
+  display: inline-block;
+  margin-bottom: 25px;
 }
 
-.hero img {
-    margin-top: 40px;
-    width: 450px;
-    max-width: 90%;
+.hero-box h1 {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-/* ================= PAGE HEADER ================= */
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #3f8f45;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  background: #2f6f35;
+}
+
+.hero-logo {
+  width: 450px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(255,255,255,0.25);
+}
+
+/* ============================================
+   PAGE HEADER (CONSISTENT DARK BLUE)
+============================================ */
 .page-header {
-    text-align: center;
-    padding: 60px 20px 40px;
-    background: linear-gradient(to right, #e3f0ff, #f8fbff);
+  padding: 80px 40px;
+  text-align: center;
+  background: radial-gradient(circle at top, #1a2a3a, #0c131d);
+  color: white;
 }
 
 .page-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
-    color: #0b3d91;
+  font-size: 46px;
+  margin-bottom: 15px;
 }
 
 .page-header p {
-    max-width: 750px;
-    margin: auto;
-    color: #555;
+  max-width: 750px;
+  margin: auto;
+  font-size: 18px;
+  opacity: 0.85;
 }
 
-/* ================= GRID ================= */
+/* ============================================
+   CONTAINER
+============================================ */
+.container {
+  width: 85%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 0;
+}
+
+/* ============================================
+   RESOURCE GRID
+============================================ */
 .resource-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 50px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 70px;
+  background: #f4f6fa;
 }
 
-/* ================= CARD ================= */
 .resource-card {
-    background: white;
-    padding: 25px;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+  transition: 0.25s;
 }
 
 .resource-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
-.resource-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+/* ============================================
+   WELLNESS PAGE
+============================================ */
+.life-section {
+  padding: 80px 12%;
 }
 
-.resource-card h2 {
-    font-size: 18px;
-    font-weight: 600;
+.life-text {
+  max-width: 800px;
 }
 
-/* ================= TAG ================= */
-.category {
-    background: #0b3d91;
-    color: white;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 12px;
+.life-text h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
 }
 
-/* ================= LINKS ================= */
-.resource-card a {
-    color: #2563eb;
-    text-decoration: none;
-    font-weight: 500;
+.life-text p {
+  font-size: 17px;
+  margin-bottom: 18px;
+  opacity: 0.9;
 }
 
-.resource-card a:hover {
-    text-decoration: underline;
+/* ============================================
+   PAC INTRO
+============================================ */
+.pac-intro {
+  background: #f8f9fc;
+  text-align: center;
 }
 
-/* ================= BUTTON ================= */
-.life-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 14px;
-    background-color: #0b3d91;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
+/* ============================================
+   PAC SUPPORT CARDS
+============================================ */
+.pac-support h2 {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.life-btn:hover {
-    background-color: #ff9800;
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
-/* ================= DETAILS ================= */
-details summary {
-    cursor: pointer;
-    font-weight: 600;
-    margin-top: 10px;
-    color: #0b3d91;
+.support-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
 }
 
-details p {
-    margin-top: 8px;
+.support-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
 }
 
-/* ================= FOOTER ================= */
+/* ============================================
+   PAC CTA (SOFT PEACH)
+============================================ */
+.pac-cta {
+  background: #ffe8d6;
+  color: #0e1722;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #f4a261;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #e76f51;
+}
+
+/* ============================================
+   PAC VIDEO
+============================================ */
+.pac-video {
+  padding: 90px 12%;
+  background: radial-gradient(circle at top, #1a2a3a, #0c131d);
+  color: white;
+  text-align: center;
+}
+
+.video-wrapper {
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* ============================================
+   FOOTER
+============================================ */
 .site-footer {
+  background-color: #0f1f2e;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 900px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
     text-align: center;
-    padding: 25px;
-    background-color: #0b3d91;
-    color: white;
-    margin-top: 50px;
+  }
+
+  .navbar nav a {
+    margin: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 25px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-logo {
+    margin-top: 40px;
+    width: 220px;
+  }
+
+  .page-header h1 {
+    font-size: 34px;
+  }
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
 
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .resource-grid {
-        padding: 30px 20px;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero img {
-        width: 300px;
-    }
+/* ============================================
+   PAC Video
+============================================ */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
 }
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+} make it better like those academic and exams mindsate writen in colors
