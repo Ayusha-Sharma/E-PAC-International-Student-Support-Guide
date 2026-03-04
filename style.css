@@ -369,4 +369,44 @@ a:hover {
     background-color: #efe3d5;  /* beige */
 }
 
+/* Tag Base Style */
+.tag {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+/* 🧠 Mindset */
+.tag.mindset {
+    background-color: #6c63ff;  /* soft purple */
+}
+
+/* 📅 Planning */
+.tag.planning {
+    background-color: #f4a261;  /* warm orange */
+}
+
+/* 📚 Skills */
+.tag.skills {
+    background-color: #2a9d8f;  /* teal */
+}
+
+/* 🎓 Academic */
+.tag.academic {
+    background-color: #3a86ff;  /* blue */
+}
+
+/* 📝 Exams */
+.tag.tutoring {
+    background-color: #e76f51;  /* coral */
+}
+
+/* 🌿 Wellness */
+.tag.wellness {
+    background-color: #43aa8b;  /* sage green */
+}
+
 
