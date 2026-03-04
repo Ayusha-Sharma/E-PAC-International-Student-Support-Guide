@@ -371,42 +371,43 @@ a:hover {
 
 /* Base tag style */
 .tag {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    font-size: 14px;
+    font-weight: 700;   /* more bold */
+    letter-spacing: 0.6px;
+    margin-top: 6px;
+    display: inline-block;
 }
 
-/* 🧠 Mindset */
+/* 🧠 Mindset - deep violet */
 .tag.mindset {
-    color: #6c63ff;   /* soft purple */
+    color: #5a4fcf;
 }
 
-/* 📅 Planning */
+/* 📅 Planning - muted terracotta */
 .tag.planning {
-    color: #f4a261;   /* warm orange */
+    color: #c96a3d;
 }
 
-/* 📚 Skills */
+/* 📚 Skills - deep teal */
 .tag.skills {
-    color: #2a9d8f;   /* teal */
+    color: #1f7a73;
 }
 
-/* 🎓 Academic */
+/* 🎓 Academic - strong navy */
 .tag.academic {
-    color: #3a86ff;   /* blue */
+    color: #1f4e8c;
 }
 
-/* 📝 Exams */
+/* 📝 Exams - muted brick */
 .tag.tutoring {
-    color: #e76f51;   /* coral */
+    color: #b94a3c;
 }
 
-/* 🌿 Wellness */
+/* 🌿 Wellness - muted sage */
 .tag.wellness {
-    color: #43aa8b;   /* sage green */
+    color: #2f7a5f;
 }
-.resource-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.tag {
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 2px;
 }
