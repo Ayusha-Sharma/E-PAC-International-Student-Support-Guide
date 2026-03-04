@@ -352,4 +352,20 @@ a {
 
 a:hover {
   text-decoration: underline;
-} make it better like those academic and exams mindsate writen in colors
+} 
+
+/* Counseling Section - Nude */
+.counseling-section {
+  background-color: #f4e9e2;  /* soft nude */
+  padding: 80px 10%;
+  border-radius: 20px;
+  margin-bottom: 60px;
+}
+
+/* Engagement Section - Beige */
+.engagement-section {
+  background-color: #efe3d5;  /* warm beige */
+  padding: 80px 10%;
+  border-radius: 20px;
+}
+
