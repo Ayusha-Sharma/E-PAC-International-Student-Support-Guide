@@ -211,6 +211,15 @@ a:hover {
 .life-section {
   padding: 100px 12%;
 }
+/* Counseling section background */
+.counseling-block {
+  background-color: #f4e9e2;
+}
+
+/* Engagement section background */
+.engagement-block {
+  background-color: #efe3d5;
+}
 
 .life-text {
   max-width: 800px;
@@ -419,3 +428,4 @@ a:hover {
   }
 
 }
+
