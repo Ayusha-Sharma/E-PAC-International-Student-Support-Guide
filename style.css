@@ -1,11 +1,12 @@
 /* ============================================
-   GLOBAL RESET
+   GLOBAL RESET & BASE
 ============================================ */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -13,8 +14,20 @@ html {
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: #333;
+  background: #ffffff;
+}
+
+a {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* ============================================
@@ -37,22 +50,20 @@ body {
 
 .globe-icon {
   width: 60px;
-  height: auto;
 }
 
 .logo span {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 17px;
   letter-spacing: 0.5px;
 }
 
 .navbar nav a {
   color: white;
-  text-decoration: none;
   margin-left: 30px;
   font-size: 15px;
   opacity: 0.85;
-  transition: 0.2s;
+  transition: opacity 0.25s ease;
 }
 
 .navbar nav a:hover {
@@ -100,21 +111,6 @@ body {
   opacity: 0.9;
 }
 
-.btn {
-  display: inline-block;
-  padding: 14px 28px;
-  background: #3f8f45;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: 0.25s;
-}
-
-.btn:hover {
-  background: #2f6f35;
-}
-
 .hero-logo {
   width: 450px;
   border-radius: 50%;
@@ -122,7 +118,39 @@ body {
 }
 
 /* ============================================
-   PAGE HEADER (CONSISTENT DARK BLUE)
+   BUTTONS
+============================================ */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #3f8f45;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.25s ease;
+}
+
+.btn:hover {
+  background: #2f6f35;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #f4a261;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #e76f51;
+}
+
+/* ============================================
+   PAGE HEADER
 ============================================ */
 .page-header {
   padding: 80px 40px;
@@ -169,7 +197,7 @@ body {
   padding: 28px;
   border-radius: 18px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.10);
-  transition: 0.25s;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .resource-card:hover {
@@ -178,10 +206,10 @@ body {
 }
 
 /* ============================================
-   WELLNESS PAGE
+   LIFE / WELLNESS SECTION
 ============================================ */
 .life-section {
-  padding: 80px 12%;
+  padding: 100px 12%;
 }
 
 .life-text {
@@ -200,16 +228,13 @@ body {
 }
 
 /* ============================================
-   PAC INTRO
+   PAC SECTIONS
 ============================================ */
 .pac-intro {
   background: #f8f9fc;
   text-align: center;
 }
 
-/* ============================================
-   PAC SUPPORT CARDS
-============================================ */
 .pac-support h2 {
   text-align: center;
   margin-bottom: 40px;
@@ -226,7 +251,7 @@ body {
   padding: 25px;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .support-card:hover {
@@ -235,7 +260,7 @@ body {
 }
 
 /* ============================================
-   PAC CTA (SOFT PEACH)
+   PAC CTA
 ============================================ */
 .pac-cta {
   background: #ffe8d6;
@@ -244,24 +269,8 @@ body {
   padding: 70px 20px;
 }
 
-.cta-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 28px;
-  background: #f4a261;
-  color: white;
-  font-weight: 600;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.cta-button:hover {
-  background: #e76f51;
-}
-
 /* ============================================
-   PAC VIDEO
+   VIDEO
 ============================================ */
 .pac-video {
   padding: 90px 12%;
@@ -271,11 +280,95 @@ body {
 }
 
 .video-wrapper {
+  position: relative;
   max-width: 800px;
   margin: 30px auto;
+  padding-bottom: 56.25%;
+  height: 0;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* ============================================
+   TAG LABELS
+============================================ */
+.tag {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin-top: 6px;
+  display: inline-block;
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 2px;
+}
+
+.tag.mindset { color: #5a4fcf; }
+.tag.planning { color: #c96a3d; }
+.tag.skills { color: #1f7a73; }
+.tag.academic { color: #1f4e8c; }
+.tag.tutoring { color: #b94a3c; }
+.tag.wellness { color: #2f7a5f; }
+
+/* ============================================
+   RESOURCE SECTIONS
+============================================ */
+.resource-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.resource-section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.resource-block {
+  background: #f5f7ff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.resource-block:hover {
+  transform: translateY(-3px);
+}
+
+/* ============================================
+   FINANCIAL SECTION
+============================================ */
+.financial-section {
+  background-color: #dfeee6;
+  border-left: 6px solid #7fae95;
+  padding: 50px 35px;
+  margin: 60px auto;
+  max-width: 1000px;
+  border-radius: 12px;
+}
+
+/* ============================================
+   BACK TO TOP BUTTON
+============================================ */
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  border: none;
+  background: #6a8f7b;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
 /* ============================================
@@ -291,7 +384,7 @@ body {
 }
 
 /* ============================================
-   RESPONSIVE
+   RESPONSIVE DESIGN
 ============================================ */
 @media (max-width: 900px) {
 
@@ -324,195 +417,5 @@ body {
   .page-header h1 {
     font-size: 34px;
   }
-}
 
-
-/* ============================================
-   PAC Video
-============================================ */
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 ratio */
-    height: 0;
-    overflow: hidden;
 }
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-a {
-  color: #2563eb;
-  font-weight: 500;
-}
-
-a:hover {
-  text-decoration: underline;
-} 
-
-/* Make sections full width */
-.life-section {
-    padding: 100px 12%;
-}
-
-/* Counseling FULL background nude */
-.counseling-block {
-    background-color: #f4e9e2;  /* nude */
-}
-
-/* Engagement FULL background beige */
-.engagement-block {
-    background-color: #efe3d5;  /* beige */
-}
-
-/* Base tag style */
-.tag {
-    font-size: 14px;
-    font-weight: 700;   /* more bold */
-    letter-spacing: 0.6px;
-    margin-top: 6px;
-    display: inline-block;
-}
-
-/* 🧠 Mindset - deep violet */
-.tag.mindset {
-    color: #5a4fcf;
-}
-
-/* 📅 Planning - muted terracotta */
-.tag.planning {
-    color: #c96a3d;
-}
-
-/* 📚 Skills - deep teal */
-.tag.skills {
-    color: #1f7a73;
-}
-
-/* 🎓 Academic - strong navy */
-.tag.academic {
-    color: #1f4e8c;
-}
-
-/* 📝 Exams - muted brick */
-.tag.tutoring {
-    color: #b94a3c;
-}
-
-/* 🌿 Wellness - muted sage */
-.tag.wellness {
-    color: #2f7a5f;
-}
-.tag {
-    border-bottom: 2px solid currentColor;
-    padding-bottom: 2px;
-}
-
-.resource-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-}
-
-.resource-section h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-.resource-section .intro {
-  margin-bottom: 30px;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.resource-block {
-  background: #f5f7ff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  transition: transform 0.2s ease;
-}
-
-.resource-block:hover {
-  transform: translateY(-3px);
-}
-
-.resource-block h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-.resource-block ul {
-  padding-left: 20px;
-}
-
-.financial-section {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
-
-.financial-section h2 {
-  margin-bottom: 20px;
-}
-
-.financial-section h3 {
-  margin-top: 20px;
-}
-.financial-section {
-  background-color: #dfeee6;
-  border-left: 6px solid #7fae95;
-  padding: 50px 35px;
-  margin: 60px auto;
-  max-width: 1000px;
-  border-radius: 12px;
-}
-
-.financial-section h2 {
-  margin-bottom: 20px;
-}
-
-.financial-section h3 {
-  margin-top: 25px;
-}
-
-.card {
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 18px rgba(0,0,0,0.1);
-}
-
-section {
-padding: 60px 20px;
-}
-
-.hero h1 {
-font-size:42px;
-font-weight:800;
-margin-bottom:10px;
-}
-
-.hero p {
-font-size:18px;
-color:#555;
-}
-
-#topBtn {
-position: fixed;
-bottom: 20px;
-right: 20px;
-padding:10px 15px;
-border:none;
-background:#6a8f7b;
-color:white;
-cursor:pointer;
-border-radius:6px;
-}
-
